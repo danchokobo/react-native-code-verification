@@ -1,5 +1,5 @@
 
-# react-native-react-native-code-verification
+# react-native-code-verification
 This module presents you view with digit display and numkeypad for convinient entering
 
 ## Getting started
