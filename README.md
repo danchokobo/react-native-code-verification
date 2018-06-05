@@ -28,5 +28,11 @@ class Example extends Component<IProps> {
   };
 }
 ```
+
+### Props
+| Name | Type | Description | Default |
+| ---- | :---: | --- | --- |
+| ```descriptionText``` | String  | A description text under digit | Please enter pincode for entry
+
 ## Credentials
 © [Otel Danagul](https://github.com/danchokobo)
