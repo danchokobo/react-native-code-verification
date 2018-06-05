@@ -1,6 +1,6 @@
 
 # react-native-code-verification
-This module presents you view with digit display and numkeypad for convinient entering
+This module presents you UI for user typing pincode verification
 
 ## Getting started
 
