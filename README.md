@@ -4,7 +4,7 @@ This module presents you view with digit display and numkeypad for convinient en
 
 ## Getting started
 
-`$ npm install react-native-code-verification --save
+`$ npm install react-native-code-verification --save`
 
 
 ## Screenshots
