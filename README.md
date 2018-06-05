@@ -38,7 +38,7 @@ class Example extends Component {
 | ```onPressTouchId``` | Function  | Touch Id is not available, but you can make it by yourself | -
 
 ## Credentials
-© [Otel Danagul](https://github.com/danchokobo)
+[MIT](http://opensource.org/licenses/mit-license.html), ©[Otel Danagul](https://github.com/danchokobo)
 
-[MIT](http://opensource.org/licenses/mit-license.html)
+
 
