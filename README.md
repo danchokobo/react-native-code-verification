@@ -39,3 +39,6 @@ class Example extends Component<IProps> {
 
 ## Credentials
 © [Otel Danagul](https://github.com/danchokobo)
+
+© [MIT](https://github.com/danchokobo/react-native-code-verification/LICENSE)
+
