@@ -32,7 +32,7 @@ class Example extends Component<IProps> {
 ### Props
 | Name | Type | Description | Default |
 | ---- | :---: | --- | --- |
-| ```descriptionText``` | String  | A description text under digit | Please enter pincode for entry
+| ```descriptionText``` | String  | A description text | Please enter pincode for entry
 | ```onEnteredPincode``` | Function  | A function that returns entered code | -
 | ```onCloseView``` | Function  | On press close button, will be useful to close view | -
 | ```onPressTouchId``` | Function  | Touch Id is not available, but you can make it by yourself | -
