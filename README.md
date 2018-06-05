@@ -15,7 +15,7 @@ This module presents you view with digit display and numkeypad for convinient en
 import Pincode from 'react-native-code-verification';
 
 // TODO: What to do with the module?
-class Example extends Component<IProps> {
+class Example extends Component {
   public render() {
     return (
       <View style={styles.container}>
