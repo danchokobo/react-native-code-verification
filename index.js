@@ -83,7 +83,7 @@ export default class App extends Component {
   renderItemCell = ({ item, index }) => {
     if (index === 9) {
       return (
-        <TouchableOpacity style={[styles.round, styles.centerAlignment]}>
+        <TouchableOpacity style={[styles.round, styles.centerAlignment]} onPress={() => this.props.onPressTouchId()} >
           <Image source={fingerprintIcon.src} style={styles.icon} />
         </TouchableOpacity>
       );
@@ -94,7 +94,7 @@ export default class App extends Component {
           onPress={this.onRemoveDigit}
           disabled={this.state.clearDisabled}
         >
-          <Image source={deleteIcon.src} style={styles.fingerprint} />
+          <Image source={deleteIcon.src} style={styles.deleteIcon} />
         </TouchableOpacity>
       );
     } else {
@@ -201,7 +201,7 @@ const styles = StyleSheet.create({
     flex: 0.5,
     marginBottom: 10
   },
-  fingerprint: {
+  deleteIcon: {
     height: 20,
     width: 20
   }
