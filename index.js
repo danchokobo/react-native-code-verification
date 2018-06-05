@@ -112,7 +112,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <TouchableOpacity style={styles.close}>
+        <TouchableOpacity style={styles.close} onPress={() => this.props.onCloseView()} >
           <Image source={closeIcon.src} style={styles.icon} />
         </TouchableOpacity>
         <View style={styles.enterView}>
