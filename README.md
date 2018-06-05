@@ -12,10 +12,21 @@ This module presents you view with digit display and numkeypad for convinient en
 
 ## Usage
 ```javascript
-import RNReactNativeCodeVerification from 'react-native-react-native-code-verification';
+import Pincode from 'react-native-code-verification';
 
 // TODO: What to do with the module?
-RNReactNativeCodeVerification;
+class Example extends Component<IProps> {
+  public render() {
+    return (
+      <View style={styles.container}>
+        <Pincode onEnteredPincode={pin => this.onDetectPin(pin)} />
+      </View>
+    );
+  }
+  private onDetectPin = pin => {
+    console.log('pinCode>>>', pin);
+  };
+}
 ```
 ## Credentials
 © [Otel Danagul](https://github.com/danchokobo)
