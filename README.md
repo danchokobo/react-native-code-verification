@@ -14,6 +14,8 @@ An UI module for user-side pincode verification.
 | ```onCloseView``` | Function  | On press close button, will be useful to close view | -
 | ```onPressTouchId``` | Function  | Touch Id is not available, but you can make it by yourself | -
 
+## Screenshots
+<img src="/screenshots/second.png?raw=true" width="30%"> 
 
 ## Usage
 ```javascript
@@ -33,9 +35,6 @@ class Example extends Component {
   };
 }
 ```
-## Screenshots
-<img src="/screenshots/second.png?raw=true" width="30%"> 
-
 
 ## Credentials
 [MIT](http://opensource.org/licenses/mit-license.html), ©[Otel Danagul](https://github.com/danchokobo)
