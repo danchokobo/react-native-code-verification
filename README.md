@@ -1,14 +1,19 @@
 
 # react-native-code-verification
-This module presents you UI for user typing pincode verification
+An UI module for user-side pincode verification.
 
 ## Getting started
 
 `$ npm i react-native-code-verification --s`
 
+### Props
+| Name | Type | Description | Default |
+| ---- | :---: | --- | --- |
+| ```descriptionText``` | String  | A description text | Please enter pincode for entry
+| ```onEnteredPincode``` | Function  | A function that returns entered code | -
+| ```onCloseView``` | Function  | On press close button, will be useful to close view | -
+| ```onPressTouchId``` | Function  | Touch Id is not available, but you can make it by yourself | -
 
-## Screenshots
-<img src="/screenshots/second.png?raw=true" width="30%"> 
 
 ## Usage
 ```javascript
@@ -28,14 +33,9 @@ class Example extends Component {
   };
 }
 ```
+## Screenshots
+<img src="/screenshots/second.png?raw=true" width="30%"> 
 
-### Props
-| Name | Type | Description | Default |
-| ---- | :---: | --- | --- |
-| ```descriptionText``` | String  | A description text | Please enter pincode for entry
-| ```onEnteredPincode``` | Function  | A function that returns entered code | -
-| ```onCloseView``` | Function  | On press close button, will be useful to close view | -
-| ```onPressTouchId``` | Function  | Touch Id is not available, but you can make it by yourself | -
 
 ## Credentials
 [MIT](http://opensource.org/licenses/mit-license.html), ©[Otel Danagul](https://github.com/danchokobo)
