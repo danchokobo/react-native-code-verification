@@ -15,6 +15,7 @@ An UI module for user-side pincode verification.
 | ```onEnteredPincode``` | Function  | A function that returns entered code | -
 | ```onCloseView``` | Function  | On press close button, will be useful to close view | -
 | ```onPressTouchId``` | Function  | Touch Id is not available, but you can make it by yourself | -
+| ```withTouchId``` | Boolean  | If you do not neet touch id, you can set it to false | TRUE
 
 ## Screenshots
 <img src="/screenshots/second.png?raw=true" width="30%"> 
