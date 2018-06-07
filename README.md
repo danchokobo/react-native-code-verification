@@ -18,6 +18,7 @@ An UI module for user-side pincode verification.
 | ```withTouchId``` | Boolean  | If you do not neet touch id, you can set it to false | TRUE
 
 ## Screenshots
+<img src="/screenshots/blue.png?raw=true" width="30%"> 
 <img src="/screenshots/second.png?raw=true" width="30%"> 
 
 ## Usage
