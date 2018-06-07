@@ -10,8 +10,8 @@ An UI module for user-side pincode verification.
 | Name | Type | Description | Default |
 | ---- | :---: | --- | --- |
 | ```descriptionText``` | String  | A description text | Please enter pincode for entry
-| ```spaceColor``` | String  | Color of line under digit | #FF0000
-| ```closeButtonColor``` | String  | Color of X - close button | #FF0000
+| ```spaceColor``` | Color  | Color of line under digit | #FF0000
+| ```closeButtonColor``` | Color  | Color of X - close button | #FF0000
 | ```onEnteredPincode``` | Function  | A function that returns entered code | -
 | ```onCloseView``` | Function  | On press close button, will be useful to close view | -
 | ```onPressTouchId``` | Function  | Touch Id is not available, but you can make it by yourself | -
