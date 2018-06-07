@@ -81,13 +81,18 @@ export default class App extends Component {
   };
 
   renderItemCell = ({ item, index }) => {
-    const { closeButtonColor } = this.props;
+    const { withTouchId = true } = this.props;
     if (index === 9) {
-      return (
-        <TouchableOpacity style={[styles.round, styles.centerAlignment]} onPress={() => this.props.onPressTouchId()} >
-          <Image source={fingerprintIcon.src} style={[styles.icon, { tintColor: closeButtonColor || '#FF0000' } ]} />
-        </TouchableOpacity>
-      );
+      if(withTouchId) {
+        return (
+          <TouchableOpacity style={[styles.round, styles.centerAlignment]} onPress={() => this.props.onPressTouchId()} >
+            <Image source={fingerprintIcon.src} style={styles.icon} />
+          </TouchableOpacity>
+        );
+      }else{
+        return <View style={[styles.round]} />;
+      }
+      
     } else if (index === 11) {
       return (
         <TouchableOpacity
@@ -111,12 +116,11 @@ export default class App extends Component {
     }
   };
   render() {
-    const { spaceColor } = this.props;
-
+    const { spaceColor, closeButtonColor } = this.props;
     return (
       <View style={styles.container}>
         <TouchableOpacity style={styles.close} onPress={() => this.props.onCloseView()} >
-          <Image source={closeIcon.src} style={styles.icon} />
+          <Image source={closeIcon.src} style={[styles.icon, , { tintColor: closeButtonColor || '#FF0000' }]} />
         </TouchableOpacity>
         <View style={styles.enterView}>
           {empties.map(item => (

@@ -1,7 +1,7 @@
 
 {
   "name": "react-native-code-verification",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Nice view for pincode checker with num keypad",
   "main": "index.js",
   "scripts": {
