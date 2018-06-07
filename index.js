@@ -81,10 +81,11 @@ export default class App extends Component {
   };
 
   renderItemCell = ({ item, index }) => {
+    const { closeButtonColor } = this.props;
     if (index === 9) {
       return (
         <TouchableOpacity style={[styles.round, styles.centerAlignment]} onPress={() => this.props.onPressTouchId()} >
-          <Image source={fingerprintIcon.src} style={styles.icon} />
+          <Image source={fingerprintIcon.src} style={[styles.icon, { tintColor: closeButtonColor || '#FF0000' } ]} />
         </TouchableOpacity>
       );
     } else if (index === 11) {
@@ -110,6 +111,8 @@ export default class App extends Component {
     }
   };
   render() {
+    const { spaceColor } = this.props;
+
     return (
       <View style={styles.container}>
         <TouchableOpacity style={styles.close} onPress={() => this.props.onCloseView()} >
@@ -119,7 +122,7 @@ export default class App extends Component {
           {empties.map(item => (
             <View key={item.key} style={styles.digitView}>
               <Text style={styles.digit}>{item.value}</Text>
-              <View style={styles.redSpace} />
+              <View style={[styles.redSpace, { backgroundColor: spaceColor || '#FF0000'}]} />
             </View>
           ))}
         </View>
@@ -192,7 +195,6 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   redSpace: {
-    backgroundColor: 'red',
     height: 2,
     width: 40,
     marginHorizontal: 5
