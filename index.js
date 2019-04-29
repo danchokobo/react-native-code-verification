@@ -42,6 +42,14 @@ export default class App extends Component {
     clearDisabled: false
   };
 
+  updateEmpties() {
+    empties[0].value = ' ';
+    empties[1].value = ' ';
+    empties[2].value = ' ';
+    empties[3].value = ' ';
+    counter = 0;
+  }
+
   onEnterDigit = (num, index) => {
     const { code } = this.state;
     if (counter + 1 <= 4) {
@@ -56,7 +64,10 @@ export default class App extends Component {
       this.setState({
         digitDisabled: true
       });
+      this.updateEmpties();
     }
+
+    return this.props.currentEnteredNumber(num);
   };
 
   joinElements = () => {
@@ -66,6 +77,7 @@ export default class App extends Component {
     });
     return pincode;
   };
+
   onRemoveDigit = () => {
     if (counter - 1 >= 0) {
       --counter;
@@ -80,6 +92,11 @@ export default class App extends Component {
     }
   };
 
+  closeView() {
+    this.updateEmpties();
+    return this.props.onCloseView()
+  }
+
   renderItemCell = ({ item, index }) => {
     const { withTouchId = true } = this.props;
     if (index === 9) {
@@ -92,7 +109,6 @@ export default class App extends Component {
       }else{
         return <View style={[styles.round]} />;
       }
-      
     } else if (index === 11) {
       return (
         <TouchableOpacity
@@ -116,10 +132,10 @@ export default class App extends Component {
     }
   };
   render() {
-    const { spaceColor, closeButtonColor } = this.props;
+    const { spaceColor, closeButtonColor, textColor } = this.props;
     return (
       <View style={styles.container}>
-        <TouchableOpacity style={styles.close} onPress={() => this.props.onCloseView()} >
+        <TouchableOpacity style={styles.close} onPress={() => this.closeView()} >
           <Image source={closeIcon.src} style={[styles.icon, , { tintColor: closeButtonColor || '#FF0000' }]} />
         </TouchableOpacity>
         <View style={styles.enterView}>
@@ -131,7 +147,7 @@ export default class App extends Component {
           ))}
         </View>
         <View style={[styles.textView, styles.centerAlignment]}>
-          <Text style={styles.instruction}>
+          <Text style={[styles.instruction, { color: textColor || 'gray'}]>
             {this.props.descriptionText || 'Please enter pincode for entry'}
           </Text>
         </View>
@@ -184,7 +200,6 @@ const styles = StyleSheet.create({
   instruction: {
     marginHorizontal: 30,
     textAlign: 'center',
-    color: 'gray',
     fontSize: 14
   },
   close: {
